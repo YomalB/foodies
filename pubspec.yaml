@@ -1,0 +1,48 @@
+name: foodies
+description: "A new Flutter project."
+publish_to: 'none' # Indicates the package is not intended for publishing
+
+version: 1.0.0+1
+
+# Specify the Dart SDK version range that supports null safety
+environment:
+  sdk: '>=2.12.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  curved_navigation_bar: ^1.0.6 # Navigation bar dependency
+  cupertino_icons: ^1.0.8 # Downgraded Cupertino icons for iOS styling
+  firebase_core: ^3.1.0 # Firebase core dependency
+  firebase_auth: ^5.1.0 # Firebase authentication
+  cloud_firestore: ^5.0.1 # Valid version of Firestore database
+  flutter_stripe: ^10.2.0 # Stripe payment integration
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0 # Linting for best practices
+
+flutter:
+  uses-material-design: true
+
+  # Specify the assets directory
+  assets:
+    - images/
+
+  # Specify custom fonts
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-SemiBold.ttf
+
+dependency_overrides:
+  collection: ^1.19.0
+  http_parser: ^4.1.0
+  leak_tracker: ^10.0.5
+  leak_tracker_flutter_testing: ^3.0.5
+  leak_tracker_testing: ^3.0.1
+  material_color_utilities: ^0.12.0
+  meta: ^1.15.0
+  test_api: ^0.7.2
+  vm_service: ^14.2.4
