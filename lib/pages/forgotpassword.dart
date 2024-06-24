@@ -16,6 +16,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Container(
         child: Column(
           children: [
@@ -79,32 +80,24 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     height: 40.0,
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 60.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 140,
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Center(
-                            child: Text(
-                              "send email",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                      ],
+                    width: 140,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Center(
+                      child: Text(
+                        "send email",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  )
+                  ),
                 ],
               ),
-            )))
+            ))),
           ],
         ),
       ),
