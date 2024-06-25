@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodies/pages/singup.dart';
 
 // class ForgotPassword extends StatefulWidget {
 //   const ForgotPassword({super.key});
@@ -95,6 +96,36 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 50.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don't have an acoount?",
+                        style: TextStyle(fontSize: 18.0, color: Colors.white),
+                      ),
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignUp()));
+                        },
+                        child: Text(
+                          "Create",
+                          style: TextStyle(
+                              color: Color.fromRGBO(255, 184, 166, 6),
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      )
+                    ],
+                  )
                 ],
               ),
             ))),
