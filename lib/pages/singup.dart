@@ -8,17 +8,11 @@ import 'package:foodies/widget/content_model.dart';
 
 import '../widget/widget_support.dart';
 
-
 // class SignUp extends StatefulWidget {
 //   const SignUp({super.key});
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
-
-
-
-
-
 
   @override
   State<SignUp> createState() => _SingUpState();
@@ -152,7 +146,7 @@ class _SingUpState extends State<SignUp> {
                                 prefixIcon: Icon(Icons.person)),
                           ),
                           SizedBox(
-                            height: 30.0,
+                            height: 20.0,
                           ),
                           TextFormField(
                             controller: mailcontrollerller,
@@ -168,7 +162,7 @@ class _SingUpState extends State<SignUp> {
                                 prefixIcon: Icon(Icons.email_outlined)),
                           ),
                           SizedBox(
-                            height: 30.0,
+                            height: 20.0,
                           ),
                           TextFormField(
                             controller: passwordcontroller,
@@ -185,7 +179,7 @@ class _SingUpState extends State<SignUp> {
                                 prefixIcon: Icon(Icons.password_outlined)),
                           ),
                           SizedBox(
-                            height: 80.0,
+                            height: 70.0,
                           ),
                           GestureDetector(
                             onTap: () async {
@@ -202,7 +196,7 @@ class _SingUpState extends State<SignUp> {
                               elevation: 5.0,
                               borderRadius: BorderRadius.circular(20),
                               child: Container(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
+                                padding: EdgeInsets.symmetric(vertical: 7.0),
                                 width: 200,
                                 decoration: BoxDecoration(
                                     color: Color(0Xffff5722),

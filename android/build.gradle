@@ -17,3 +17,7 @@ tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
 
+dependencies {
+    classpath' com.google.gem.google-services:4.4.0'
+}
+
