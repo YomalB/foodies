@@ -86,7 +86,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                               controller: mailcontroller,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'please enter Email';
+                                  return '  please enter Email';
                                 }
                                 return null;
                               },
@@ -139,7 +139,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "Don't have an acoount?",
+                                "Don't have an acount?",
                                 style: TextStyle(
                                     fontSize: 18.0, color: Colors.white),
                               ),
