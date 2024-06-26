@@ -127,12 +127,15 @@ class _WalletState extends State<Wallet> {
               ],
             ),
             SizedBox(
-              height: 20.0,
+              height: 50.0,
             ),
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 20.0),
               padding: EdgeInsets.symmetric(vertical: 12.0),
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(color: Color(0xFF008080)),
+              decoration: BoxDecoration(
+                  color: Color(0xFF008080),
+                  borderRadius: BorderRadius.circular(8)),
               child: Center(
                 child: Text(
                   "Add Money",
