@@ -82,17 +82,68 @@ class _WalletState extends State<Wallet> {
               height: 10.0,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Color(0xFFE9E2E2)
-                    ),bo
+                      border: Border.all(color: Color(0xFFE9E2E2)),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Text(
+                    "\$" + "100",
+                    style: AppWidget.semiBoldTextFeildStyle(),
                   ),
-                )
+                ),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xFFE9E2E2)),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Text(
+                    "\$" + "500",
+                    style: AppWidget.semiBoldTextFeildStyle(),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xFFE9E2E2)),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Text(
+                    "\$" + "1000",
+                    style: AppWidget.semiBoldTextFeildStyle(),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xFFE9E2E2)),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Text(
+                    "\$" + "2000",
+                    style: AppWidget.semiBoldTextFeildStyle(),
+                  ),
+                ),
               ],
-            )
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 12.0),
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(color: Color(0xFF008080)),
+              child: Center(
+                child: Text(
+                  "Add Money",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
           ],
         ),
       ),
