@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodies/admin/admin_login.dart';
 import 'package:foodies/pages/bottomnav.dart';
 import 'package:foodies/pages/home.dart';
 import 'package:foodies/pages/login.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Onboard());
+        home: AdminLogin());
   }
 }
 

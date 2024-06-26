@@ -8,6 +8,8 @@ class AdminLogin extends StatefulWidget {
 }
 
 class _AdminLoginState extends State<AdminLogin> {
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +32,35 @@ class _AdminLoginState extends State<AdminLogin> {
                     top: Radius.elliptical(
                         MediaQuery.of(context).size.width, 110.0))),
           ),
-          Container()
+          Container(
+            margin: EdgeInsets.only(left: 30.0, right: 30.0, top: 60.0),
+            child: Form(
+                key: _formkey,
+                child: Column(
+                  children: [
+                    Text(
+                      "Let's start with\n Admin!",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 30.0,),
+                    Material(
+                      elevation: 3.0,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height/2.2,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                           
+                        ),
+                      ),
+                    )
+                  ],
+                )),
+          )
         ],
       )),
     );
