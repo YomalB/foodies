@@ -23,6 +23,9 @@ dependencies:
   firebase_auth: ^5.1.0 # Firebase authentication
   cloud_firestore: ^5.0.1 # Valid version of Firestore database
   flutter_stripe: ^10.2.0 # Stripe payment integration
+  image_picker: ^1.1.2
+  firebase_storage: ^12.1.0
+  
 
 dev_dependencies:
   flutter_test:
