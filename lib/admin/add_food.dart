@@ -1,5 +1,7 @@
+import 'dart:ffi';
 import 'dart:io';
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -27,6 +29,37 @@ class _AddFoodState extends State<AddFood> {
 
     selectedImage = File(image!.path);
     setState(() {});
+  }
+
+  uploadItem() async{
+    if (selectedImage != null &&
+        nameController.text != "" &&
+        priceController.text != "" &&
+        detailsController.text != "") {
+      String addId = randomAlphaNumeric(10);
+
+      Reference firebaseStorageRef =
+          FirebaseException.instance.ref().child("blogImages").child(addId);
+          Final UploadTask Task=firebaseStorageRef.putFile(selectedImage!);
+
+             var downloadUrl = await (await task).ref.getDownloadURL();
+
+
+      Map<String, dynamic> addItem = {
+        "Image": downloadUrl,
+        "Name": nameController.text,
+        "Price": priceController.text,
+        "Detail": detailsController.text
+      };
+        await DatabaseMethods().addFoodItem(addItem, value!).then((value) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: Colors.orangeAccent,
+            content: Text(
+              "Food Item has been added Successfully",
+              style: TextStyle(fontSize: 18.0),
+            )));
+      });
+    }
   }
 
   @override
