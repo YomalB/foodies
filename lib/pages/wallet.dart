@@ -37,7 +37,7 @@ class _WalletState extends State<Wallet> {
             Container(
               padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(color: Color(0xFF2F2F2)),
+              decoration: BoxDecoration(color: Color(0xFFF2F2F2)),
               child: Row(
                 children: [
                   Image.asset(
@@ -53,7 +53,7 @@ class _WalletState extends State<Wallet> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Your wallet",
+                        "Your Wallet",
                         style: AppWidget.LightTextFeildStyle(),
                       ),
                       SizedBox(
@@ -62,11 +62,36 @@ class _WalletState extends State<Wallet> {
                       Text(
                         "\$" + "100",
                         style: AppWidget.boldTextFeildStyle(),
-                      ),
+                      )
                     ],
                   ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Text(
+                "Add money",
+                style: AppWidget.semiBooldTextFeildStyle(),
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color(0xFFE9E2E2)
+                    ),bo
+                  ),
+                )
+              ],
             )
           ],
         ),
